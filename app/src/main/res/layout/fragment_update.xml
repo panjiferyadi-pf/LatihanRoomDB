@@ -9,46 +9,49 @@
     
     
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/update_firstname"
+        android:id="@+id/update_firstname1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/update_lastname"
+        app:layout_constraintBottom_toTopOf="@+id/update_lastname1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/update_firstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="First Name"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/update_lastname"
+        android:id="@+id/update_lastname1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_firstname">
+        app:layout_constraintTop_toBottomOf="@+id/update_firstname1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/update_lastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Last Name"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/update_age"
+        android:id="@+id/update_age1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/update_lastname"
+        app:layout_constraintTop_toBottomOf="@+id/update_lastname1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/update_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Age"/>
@@ -56,7 +59,7 @@
 
     <Button
         android:id="@+id/update_button"
-        app:layout_constraintTop_toBottomOf="@+id/update_age"
+        app:layout_constraintTop_toBottomOf="@+id/update_age1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30dp"

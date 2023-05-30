@@ -38,9 +38,9 @@ class AddFragment : Fragment() {
     }
 
     private fun insertDataToDatabase(){
-        val firstName = binding.addFirstname1.text.toString()
-        val lastName = binding.addLastname1.text.toString()
-        val age = Integer.parseInt(binding.addAge1.text.toString())
+        val firstName = binding.addFirstname.text.toString()
+        val lastName = binding.addLastname.text.toString()
+        val age = Integer.parseInt(binding.addAge.text.toString())
 
         val user = User(0, firstName, lastName, age)
         mUserViewModel

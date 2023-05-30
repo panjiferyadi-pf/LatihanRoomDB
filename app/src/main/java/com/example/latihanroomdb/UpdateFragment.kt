@@ -6,26 +6,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.latihanroomdb.databinding.FragmentUpdateBinding
 
 class UpdateFragment : Fragment() {
-    private lateinit var binding: FragmentUpdateBinding
+    //Mendeklarasikan variabel args
+    private val args by navArgs<UpdateFragmentArgs>()
+
+    private var _binding: FragmentUpdateBinding? = null
+    private val binding get() = _binding!!
+    //private lateinit var binding: FragmentUpdateBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentUpdateBinding.inflate(inflater, container, false)
-        return binding.root
+        _binding = FragmentUpdateBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        binding.updateFirstname.setText(args.currentUser.firstName)
+        binding.updateLastname.setText(args.currentUser.lastName)
+        binding.updateAge.setText(args.currentUser.age.toString())
+        return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding.updateButton.setOnClickListener{
-            this.findNavController().navigate(R.id.action_updateFragment_to_listFragment2)
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        binding.updateButton.setOnClickListener{
+//            this.findNavController().navigate(R.id.action_updateFragment_to_listFragment2)
+//        }
+//    }
 
 }
